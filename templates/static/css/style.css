@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #34495e;
+}
+
+p {
+    color: green;
+    font-weight: bold;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+button {
+    background: #0078D7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-actions a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+
+.download-btn {
+    background: #28a745;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.file-actions a:hover {
+    opacity: 0.85;
+}
