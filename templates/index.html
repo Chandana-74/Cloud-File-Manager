@@ -9,12 +9,13 @@
 
 <div class="container">
 
-    <h1>☁️ Cloud File Manager</h1>
+    <h1> Cloud File Manager</h1>
+    <p class="subtitle">AWS S3 Powered Cloud Storage</p>
 
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <p>{{ message }}</p>
+                <p class="flash-message">{{ message }}</p>
             {% endfor %}
         {% endif %}
     {% endwith %}
@@ -24,8 +25,12 @@
         <br><br>
         <button type="submit">Upload</button>
     </form>
+    <div class="stats-card">
+    <h3>{{ total_files }}</h3>
+    <p>Total Files</p>
+</div>
 
-    <h2>📂 Uploaded Files ({{ total_files }})</h2>
+    <h2>📂 Uploaded Files </h2>
 
     <ul>
         {% for file in files %}
@@ -61,7 +66,7 @@
 </body>
 <script>
     setTimeout(function () {
-        const message = document.querySelector("p");
+        const message = document.querySelector(".flash-message");
 
         if (message) {
             message.style.display = "none";
