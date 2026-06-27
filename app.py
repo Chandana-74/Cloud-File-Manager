@@ -73,6 +73,17 @@ def download(filename):
     print(url)
     return redirect(url)
 
+@app.route("/delete/<filename>")
+def delete(filename):
+    s3.delete_object(
+        Bucket=AWS_BUCKET_NAME,
+        Key=filename
+    )
+
+    flash(f"{filename} deleted successfully!")
+
+    return redirect(url_for("home"))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
