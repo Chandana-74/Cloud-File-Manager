@@ -10,8 +10,7 @@
 <div class="container">
 
     <h1> Cloud File Manager</h1>
-    <p class="subtitle">AWS S3 Powered Cloud Storage</p>
-
+    <div class="subtitle">AWS S3 Powered Cloud Storage</div>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
@@ -26,8 +25,8 @@
         <button type="submit">Upload</button>
     </form>
     <div class="stats-card">
-    <h3>{{ total_files }}</h3>
-    <p>Total Files</p>
+    <div class="stats-number">{{ total_files }}</div>
+    <div class="stats-label">Total Files</div>
 </div>
 
     <h2>📂 Uploaded Files </h2>
